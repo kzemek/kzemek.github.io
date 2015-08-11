@@ -7,34 +7,6 @@ categories:
 - GSoC
 tags:
 - KDE
-comments:
-- id: 558
-  author: Jacky Alciné
-  author_email: me@jalcine.me
-  author_url: http://jalcine.me
-  date: !binary |-
-    MjAxMy0wOC0wNSAyMToxOToxMCAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wOC0wNSAxOToxOToxMCAtMDQwMA==
-  content: ! "I have to ask; what kind of tools do you use to test? I find it kind
-    of hard to do testing (as opposed to testing in Ruby or Python).\r\n\r\nWhat do
-    you use for mocking objects or stubbing out responses?"
-- id: 559
-  author: admin
-  author_email: konrad.zemek@gmail.com
-  author_url: ''
-  date: !binary |-
-    MjAxMy0wOC0wNSAyMToyNToyNSAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wOC0wNSAxOToyNToyNSAtMDQwMA==
-  content: ! "We use <a href=\"http://qt-project.org/doc/qt-4.8/qtestlib-manual.html\"
-    rel=\"nofollow\">QTestLib</a>. While it has very basic testing features and is
-    by no means sophisticated, it does its job good enough. Normally for C++ testing
-    I recommend <a href=\"http://code.google.com/p/googletest/\" rel=\"nofollow\">Google
-    Test</a>.\r\nFor mocking and stubbing we use <a href=\"http://code.google.com/p/googlemock/\"
-    rel=\"nofollow\">Google Mock</a>. This is a splendid piece of software, and while
-    it still has some limitations due to the nature of C++, it makes mocking-related
-    stuff a pleasure to do."
 ---
 
 {% include gsoc_header.md %}

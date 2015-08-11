@@ -7,27 +7,6 @@ categories:
 - GSoC
 tags:
 - KDE
-comments:
-- id: 155
-  author: Peter Grasch
-  author_email: peter@grasch.net
-  author_url: http://grasch.net
-  date: !binary |-
-    MjAxMy0wNy0wOSAwNzo0MDoxMSAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wNy0wOSAwNTo0MDoxMSAtMDQwMA==
-  content: ! "You can also use QMetaObject::invokeMethod instead of that (artificial
-    looking) signal.\r\n\r\nBest regards,\r\nPeter"
-- id: 160
-  author: admin
-  author_email: konrad.zemek@gmail.com
-  author_url: ''
-  date: !binary |-
-    MjAxMy0wNy0wOSAxMzozMTo0NCAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wNy0wOSAxMTozMTo0NCAtMDQwMA==
-  content: Thanks, <code>QMetaObject::invokeMethod(this, "retrieveAllData", Qt::BlockingQueuedConnection);</code>
-    is indeed clearer than using a forced signal-slot pair.
 ---
 
 {% include gsoc_header.md %}

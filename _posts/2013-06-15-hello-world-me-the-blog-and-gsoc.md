@@ -8,23 +8,6 @@ categories:
 - GSoC
 tags:
 - KDE
-comments:
-- id: 11
-  author: WhE
-  author_email: piotr.galiszewski@kadu.im
-  author_url: http://www.kadu.im
-  date: !binary |-
-    MjAxMy0wNi0xNiAyMToxMzoyNiAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wNi0xNiAxOToxMzoyNiAtMDQwMA==
-  content: ! "Gratki! Miło słyszęć że ktoś z naszej infy bierze udział w tegorocznym
-    GSoC! GSoC to świetny start kariery (sam brałem udział po drugim roku), a Qt to
-    dobry wybór. Ludzi w PL bardzo brakuje, więc rozwijaj się  i praktykuj OS póki
-    masz czas :P . W razie jakiś pytań (Qt czy GSoC), możesz jeszcze przez jakiś czas
-    chwycić mnie na forum, lub przez maila. Pozdro!\r\n\r\nCongrats! It is great to
-    see someone from my university working on Google Summer of Code for KDE. I have
-    not been using Amarok for some time (I prefer streaming platforms like spotify
-    or desura), but maybe someday I will come back. All the best with your exam session!"
 ---
 
 Hey! My name is Konrad Zemek, I'm a student at AGH University of Science and

@@ -7,36 +7,6 @@ categories:
 - GSoC
 tags:
 - KDE
-comments:
-- id: 726
-  author: Victor
-  author_email: victor.varvariuc@gmail.com
-  author_url: ''
-  date: !binary |-
-    MjAxMy0wOC0yMCAxODozNTowNSAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wOC0yMCAxNjozNTowNSAtMDQwMA==
-  content: Nice widget theme and window decorations you have there! How did you manage
-    to achiveve this look?
-- id: 727
-  author: Konrad
-  author_email: konrad.zemek@gmail.com
-  author_url: http://konradzemek.com
-  date: !binary |-
-    MjAxMy0wOC0yMCAyMTozNzo1OSAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wOC0yMCAxOTozNzo1OSAtMDQwMA==
-  content: ! "I get this question every other update... ;)\r\nThe theme I use is <a
-    href=\"http://half-left.deviantart.com/art/KDE4-QtCurve-Numix-378256536\" rel=\"nofollow\">Numix</a>."
-- id: 730
-  author: Victor
-  author_email: victor.varvariuc@gmail.com
-  author_url: ''
-  date: !binary |-
-    MjAxMy0wOC0yMSAwODowMDozNCAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMy0wOC0yMSAwNjowMDozNCAtMDQwMA==
-  content: Thanks! (I searched your previous updates, but didn't find such questions.)
 ---
 
 {% include gsoc_header.md %}

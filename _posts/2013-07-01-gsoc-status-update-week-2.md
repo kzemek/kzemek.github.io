@@ -7,7 +7,6 @@ categories:
 - GSoC
 tags:
 - KDE
-comments: []
 ---
 
 {% include gsoc_header.md %}
