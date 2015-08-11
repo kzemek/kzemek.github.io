@@ -1,26 +1,19 @@
-# Dependencies
+timezone:            Europe/Warsaw
+
 markdown:            redcarpet
 highlighter:         pygments
 
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           /:year/:month/:day/:title/
 relative_permalinks: true
 
-# Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:               Konrad's weblog
+tagline:             ''
+description:         ''
 url:                 http://localhost:4000
 baseurl:             ''
 paginate:            5
 
-# About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
-
-# Custom vars
-version:             1.0.0
+  name:              Konrad Zemek
+  url:               https://konradzemek.com
+  email:             konrad.zemek@gmail.com
