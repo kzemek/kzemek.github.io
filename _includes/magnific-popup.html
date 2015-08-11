@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/public/css/magnific-popup.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/public/js/jquery.magnific-popup.min.js"></script>
+<script>
+  var titleSrc = function(item) {
+    var caption = item.el.parent().find('figcaption');
+      if (caption != null)
+        return item.el.parent().find('figcaption').text();
+  };
+
+  $('.image-wrapper a').magnificPopup({
+    type:'image',
+    image: { titleSrc: titleSrc }
+  });
+
+  $('.gallery').each(function() {
+    $(this).magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      image: { titleSrc: titleSrc },
+      gallery: { enabled: true }
+    });
+  });
+</script>
