@@ -1,0 +1,13 @@
+{% if include.width %}
+	{% assign width = include.width %}
+{% else %}
+	{% assign width = 560 %}
+{% endif %}
+{% if include.height %}
+	{% assign height = include.height %}
+{% else %}
+	{% assign height = 420 %}
+{% endif %}
+<div class="youtube">
+	<iframe width="{{ width }}" height="{{ height }}" src="//www.youtube-nocookie.com/embed/{{ include.id }}?rel=0" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+</div>
