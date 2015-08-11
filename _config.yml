@@ -9,7 +9,7 @@ relative_permalinks: true
 title:               Konrad's weblog
 tagline:             ''
 description:         ''
-url:                 http://localhost:4000
+url:                 https://konradzemek.com
 baseurl:             ''
 paginate:            5
 
