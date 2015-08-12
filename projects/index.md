@@ -31,7 +31,7 @@ README and documentation coming soon!
 ## Razer DeathAdder Chroma driver for razercfg <sup>[<span class="octicon octicon-logo-github" title="hw_deathadder_chroma.c file on GitHub"></span>][hw_deadhadder_chroma.c]</sup>
 
 A low-level hardware access for the Razer DeathAdder Chroma mouse built on
-[libusb]. The driver was created (and is merged into) for [razercfg], an open
+[libusb]. The driver was created for (and is merged into) [razercfg], an open
 source Razer device configuration tool for Linux.
 
 ## TCP/IPv6 stack <sup>[<span class="octicon octicon-logo-github" title="TCPIPv6 repository on GitHub"></span>][TCPIPv6]</sup>
