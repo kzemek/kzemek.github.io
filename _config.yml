@@ -2,6 +2,8 @@ timezone:            Europe/Warsaw
 
 markdown:            redcarpet
 highlighter:         pygments
+redcarpet:
+    extensions:          [footnotes, with_toc_data]
 
 permalink:           /:year/:month/:day/:title/
 relative_permalinks: true

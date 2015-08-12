@@ -35,7 +35,7 @@ that in mind, this is my much-more-detailed-than-usual plan for this week:
 2. **Tuesday** FastForward importer two-way synchronization
 3. **Wednesday** Banshee & Clementine importers two-way synchronization
 4. **Thursday** Rhythmbox importer two-way synchronization
-5. **Friday** iTunes importer two-way synchronization*
+5. **Friday** iTunes importer two-way synchronization[^footnote]
 6. **weekend** more tests! Supplement existing test suites.
 
 Since I've been documenting as I went, the week between September 16 and 23 will
@@ -48,5 +48,5 @@ is named `gsoc-importers`.
 
 Thanks for reading!
 
-\* *iTunes database will then have to be imported back into iTunes. But hey,
-   it's synchronization. Kind of.*
+[^footnote]: iTunes database will then have to be imported back into iTunes.
+             But hey, it's synchronization. Kind of.
