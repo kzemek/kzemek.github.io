@@ -10,7 +10,7 @@
 
   <nav class="sidebar-nav">
     {% capture homeurl %}{{ site.baseurl }}/index.html{% endcapture %}
-    <a class="sidebar-nav-item{% if page.url == homeurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+    <a class="sidebar-nav-item{% if page.url == homeurl %} active{% endif %}" href="{{ site.baseurl }}/">Blog</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -27,6 +27,7 @@
     {% endfor %}
 
     <a class="sidebar-nav-item" href="{{ site.baseurl }}/atom.xml">Feed</a>
+    <a class="sidebar-nav-item" href="{{ site.author.linkedin_url }}">LinkedIn <span class="octicon octicon-link-external"></span></a>
 
   </nav>
 
