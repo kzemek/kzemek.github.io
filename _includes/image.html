@@ -5,8 +5,8 @@
     {% assign title = include.caption %}
 {% endif %}
 <figure class="image-wrapper">
-    <a href="{{ site.url }}/{{ include.img }}" title="{{ include.title | escape }}" target="_blank">
-        <img src="{{ site.url }}/{{ include.img }}" alt="{{ title | escape }}"/>
+    <a href="{{ site.baseurl }}/{{ include.img }}" title="{{ include.title | escape }}" target="_blank">
+        <img src="{{ site.baseurl }}/{{ include.img }}" alt="{{ title | escape }}"/>
     </a>
     {% if include.caption %}
         <figcaption class="image-caption">{{ include.caption }}</figcaption>

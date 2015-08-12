@@ -2,23 +2,23 @@
 {% assign rows = page.galleries[include.gallery] %}
 <div class="gallery">
 {% for row in rows %}
-	<div>
+    <div>
     {% for img in row %}
-    	{% if img.title %}
-    		{% assign title = img.title %}
-    	{% else %}
-    		{% assign title = img.caption %}
-		{% endif %}
-    	<figure class="figure-{{ forloop.length }}{% unless forloop.first %} figure-margin{% endunless %}">
-    		<a href="{{ site.url }}/{{ img.url }}" target="_blank">
-	        	<img src="{{ site.url }}/{{ img.url }}" alt="{{ title | escape }}"/>
-	        </a>
-	        {% if img.caption %}
-	        <figcaption>{{ img.caption }}</figcaption>
-	        {% endif %}
-	    </figure>
-	</a>
+        {% if img.title %}
+            {% assign title = img.title %}
+        {% else %}
+            {% assign title = img.caption %}
+        {% endif %}
+        <figure class="figure-{{ forloop.length }}{% unless forloop.first %} figure-margin{% endunless %}">
+            <a href="{{ site.baseurl }}/{{ img.url }}" target="_blank">
+                <img src="{{ site.baseurl }}/{{ img.url }}" alt="{{ title | escape }}"/>
+            </a>
+            {% if img.caption %}
+            <figcaption>{{ img.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    </a>
     {% endfor %}
-	</div>
+    </div>
 {% endfor %}
 </div>
