@@ -1,3 +1,10 @@
+figure { margin: 0; }
+
+.youtube { margin: 0px auto; text-align: center; }
+.youtube > div { position: relative; padding-bottom: 75%; height: 0px; margin: 0 2rem; }
+.youtube iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.image-wrapper { padding: 0 2rem; }
 p + .image-wrapper { margin-top: 2rem; }
 .image-wrapper + p { margin-top: 2rem; }
 .image-wrapper img { margin-bottom: .5rem; margin-left: auto; margin-right: auto; }
@@ -15,8 +22,6 @@ p + .gallery { margin-top: 2rem; }
 .gallery .figure-5 { width: 20%; }
 .gallery .figure-margin { margin-left: 1rem; }
 .gallery figure { display: inline-block; margin: auto; height: 100%; vertical-align: text-top }
-
-.youtube { text-align: center; }
 
 .sidebar { background: #272822; color: #f8f8f2; } /* Match the code theme */
 
