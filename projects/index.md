@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+icon: beaker
 ---
 
 ## libmacaroons-erlang <sup>[<span class="octicon octicon-logo-github" title="libmacaroons-erlang repository on GitHub"></span>][libmacaroons-erlang]</sup>

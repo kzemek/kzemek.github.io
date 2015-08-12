@@ -1,4 +1,7 @@
 figure { margin: 0; }
+.right { float: right; }
+
+.sidebar-nav .octicon { width: 16px; text-align: center; }
 
 .youtube { margin: 0px auto; text-align: center; }
 .youtube > div { position: relative; padding-bottom: 75%; height: 0px; margin: 0 2rem; }
