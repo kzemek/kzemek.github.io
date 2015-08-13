@@ -8,6 +8,7 @@ categories:
 - GSoC
 tags:
 - KDE
+- Amarok
 ---
 
 Hey! My name is Konrad Zemek, I'm a student at AGH University of Science and

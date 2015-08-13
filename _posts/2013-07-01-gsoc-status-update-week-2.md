@@ -7,6 +7,7 @@ categories:
 - GSoC
 tags:
 - KDE
+- Amarok
 ---
 
 {% include gsoc_header.md %}
