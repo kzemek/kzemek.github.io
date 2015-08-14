@@ -1,6 +1,26 @@
 figure { margin: 0; }
 .right { float: right; }
 
+.legend .title {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: smaller;
+    color: #747369;
+    display: inline-block;
+    margin-bottom: 0.5em;
+    line-height: 1.2em;
+    padding: 0 0.3em;
+}
+
+.legend .color-sample {
+    display: block;
+    float: left;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+}
+
+.legend { margin-bottom: 1rem; text-align: right; }
+
 .sidebar-nav .octicon { width: 16px; text-align: center; }
 
 .youtube { margin: 0px auto; text-align: center; }

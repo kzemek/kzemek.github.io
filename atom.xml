@@ -16,6 +16,7 @@ layout: null
  </author>
 
  {% for post in site.posts %}
+    {% if post.draft %}{% continue %}{% endif %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.url }}{{ post.url }}"/>

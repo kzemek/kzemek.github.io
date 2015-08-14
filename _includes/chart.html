@@ -1,0 +1,14 @@
+{% assign chart = page.charts[include.id] %}
+{% capture chart_id %}{{ page.title | slugify }}_chart{{ include.id }}{% endcapture %}
+<script>
+  window.addEventListener('load', function() {
+    var ctx = document.getElementById('{{ chart_id }}').getContext('2d');
+    var data = {{ chart.data | jsonify }};
+    var options = {{ chart.options | jsonify }};
+    new Chart(ctx).{{ chart.type }}(data, options);
+
+    legend(document.getElementById("{{chart_id}}_legend"), data);
+  }, false);
+</script>
+<canvas class="chart" id="{{ chart_id }}"></canvas>
+<div id="{{chart_id}}_legend"></div>
