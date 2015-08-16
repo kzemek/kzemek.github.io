@@ -1,9 +1,8 @@
 ---
 layout: post
 published: true
-draft: true
 title: Asio, SSL, and scalability
-date: 2015-08-13
+date: 2015-08-16 15:06 +0200
 categories:
 - Tech
 tags:
@@ -86,7 +85,7 @@ charts:
 
 Let's say you want to build an SSL server in C++. Transmitting data is going to
 be a major part of your application, so you need it to be fast and efficiently
-use system resources (especially: processor cores).
+use system resources, especially processor cores.
 
 You may have heard of [Asio] \(possibly better known as [Boost.Asio]). Asio is a
 "cross-platform C++ library for network and low-level I/O programming that
@@ -200,7 +199,7 @@ There are two main approaches to get scalability in Asio: `thread-per-core` and
 approach as it always seemed more natural to me - we're basically creating a
 threadpool that - if needed - can dedicate one or more threads to a single
 connection, as opposed to `io_service-per-core` where each connection would be
-serviced by at most one thread. But in the light of our profiling results I've
+served by at most one thread. But in the light of our profiling results I've
 [modified the example to use the second approach][benchmark_asio.cpp].
 
 I've added a new class, `IoServices`, objects of which hold multiple
@@ -208,12 +207,13 @@ I've added a new class, `IoServices`, objects of which hold multiple
 server-side socket - we call `ioServices.get()` which will return one of the
 stored `io_service` objects on a round-robin basis.
 
-Let's look at a final chart. This time we'll just focus on 8 threads, 20
-connections, and directly compare our different benchmark applications. Note
-that I'm cheating here, if just a little bit: `io_service-per-core` will perform
-better when there are multiple connections per `io_service`, as it will result
-in a more balanced CPU load per core. Since we're considering a server scenario,
-though, 20 connections is still a very low number.
+Let's put the results into a final chart. This time we'll just focus on 8
+threads, 20 connections, and directly compare our different benchmark
+applications. Note that I'm cheating here, if just a little bit:
+`io_service-per-core` will perform better when there are multiple connections
+per `io_service`, as it will result in a more balanced CPU load. Since we're
+considering a server scenario, though, 20 connections is still a very low
+number.
 
 {% include chart.html id=3 %}
 
