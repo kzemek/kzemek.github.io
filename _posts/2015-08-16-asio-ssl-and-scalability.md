@@ -146,9 +146,9 @@ found in a call tree of `asio::ssl::detail::engine::perform`. A look at
 `engine::perform` implementation in [engine.ipp] quickly shows us that...
 everything is fine. Sure, you can maybe make a few small optimizations, but in
 the larger picture OpenSSL is used correctly. There's no error there that would
-result in the lock congestion. We conclude that the **bottleneck in scalability
-lies in OpenSSL itself**, more specifically in its error handling functions. So
-what now?
+result in the lock congestion [^1]. We conclude that the **bottleneck in
+scalability lies in OpenSSL itself**, more specifically in its error handling
+functions. So what now?
 
 ## Trying BoringSSL
 
@@ -157,7 +157,7 @@ appeared with a vision to trim down, modernize and secure OpenSSL's code while
 remaining mostly source-compatible with the original. A quick look at
 [LibreSSL's err.c] file shows it's largely unchanged from the [OpenSSL's
 version][OpenSSL's err.c]. But [BoringSSL's err.c] has obviously been reworked
-and now **uses a thread-local storage instead of locking a global mutex data
+and now **uses a thread-local storage instead of locking a global mutex for data
 access**!
 
 As I mentioned, BoringSSL is *mostly* source-compatible with OpenSSL.
@@ -225,6 +225,16 @@ That's it for the post. Now that you know how to make Asio-based SSL server
 scale, you can go build a faster and safer applications.
 
 Thanks for reading!
+
+[^1]: **UPDATE 17.08.2015**: While it's true that Asio uses OpenSSL API
+      correctly, it's possible to write multi-threaded code that uses OpenSSL
+      and which is not constrained by the error-handling bottleneck. Asio calls
+      `ERR_clear_error()` before every call to `SSL_*()` functions, as OpenSSL
+      documentation states *"The current thread's error queue must be empty
+      before the TLS/SSL I/O operation is attempted"*. To avoid the bottleneck,
+      instead of clearing the error queue before each operation, you have to
+      make sure to clear the queue after an error has occurred. This is
+      something that can be done in Asio's code.
 
 [Asio]: https://think-async.com
 [Boost.Asio]: http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio.html
