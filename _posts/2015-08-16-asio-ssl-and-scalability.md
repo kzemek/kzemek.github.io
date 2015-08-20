@@ -145,8 +145,8 @@ locking occurs in `ERR_get_state` OpenSSL function, and it can most often be
 found in a call tree of `asio::ssl::detail::engine::perform`. A look at
 `engine::perform` implementation in [engine.ipp] quickly shows us that...
 everything is fine. Sure, you can maybe make a few small optimizations, but in
-the larger picture OpenSSL is used correctly [^1]. There's no error there that
-would result in the lock congestion. We conclude that the **bottleneck in
+the larger picture OpenSSL is used correctly[^1][^2]. There's no error there
+that would result in the lock congestion. We conclude that the **bottleneck in
 scalability lies in OpenSSL itself**, more specifically in its error handling
 functions. So what now?
 
@@ -235,6 +235,11 @@ Thanks for reading!
       instead of clearing the error queue before each operation, you have to
       make *sure* to clear the queue after an error has occurred. This is
       something that can be done in Asio code.
+
+[^2]: **UPDATE 2015-08-20**: The update above turned out to be incorrect, as
+      OpenSSL will still call locking functions internally. While the solution I
+      described above will decrease lock contention, it doesn't completely
+      remove the bottleneck.
 
 [Asio]: https://think-async.com
 [Boost.Asio]: http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio.html
